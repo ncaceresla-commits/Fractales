@@ -18,11 +18,11 @@ void fractalTree(Turtle *t, float length, int depth){
 }
 
 int main(){
-	Turtle *app = turtleAppCreate(800, 600, "arbol fractal");
+	TurtleApp *app = turtleAppCreate(800, 600, "arbol fractal");
 
 	if(app == NULL)
 		return 1;
-	Turtle *t = turtleAppTurtle(app);
+	Turtle *t = turtleAppGetTurtle(app);
 
 	turtlePenUp(t);
   	turtleGoTo(t, 400.0f, 300.0f);
