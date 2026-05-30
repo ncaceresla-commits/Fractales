@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -g -Wall -Wextra -std=c11 -I.
 LDLIBS = -lcsfml-graphics -lcsfml-window -lcsfml-system -lm
 
-all: testLine fractal arbol rayo actividad1 actividad2 triangulo practica
+all: testLine fractal arbol rayo actividad1 actividad2 triangulo practica probando_angulos
 
 testLine: turtlec.c examples/testLine.c turtlec.h
 	$(CC) $(CFLAGS) turtlec.c examples/testLine.c -o testLine $(LDLIBS)
@@ -27,6 +27,8 @@ triangulo: turtlec.c triangulo.c turtlec.h
 
 practica: turtlec.c practica.c turtlec.h
 	$(CC) $(CFLAGS) turtlec.c practica.c -o practica $(LDLIBS)
+probando_angulos: turtlec.c probando_angulos.c turtlec.h
+	$(CC) $(CFLAGS) turtlec.c probando_angulos.c -o probando_angulos $(LDLIBS) 
 
 clean:
 	rm -f testLine fractal arbol rayo actividad1 actividad2 triangulo
