@@ -1,4 +1,3 @@
-//ACTIVIDAD 1 ARBOL FRACTAL
 
 #include "turtlec.h"
 
@@ -8,10 +7,10 @@ void fractalTree(Turtle *t, float length, int depth){
 	turtleForward(t, length);
 
 	turtleLeft(t, 30.0f);
-	fractalTree(t, length * 0.8, depth - 1);
+	fractalTree(t, length * 0.7, depth - 1);
 
 	turtleRight(t, 60.0f);
-	fractalTree(t, length * 0.8, depth - 1);
+	fractalTree(t, length * 0.7, depth - 1);
 
 	turtleLeft(t, 30.0f);
 	turtleBackward(t, length);
